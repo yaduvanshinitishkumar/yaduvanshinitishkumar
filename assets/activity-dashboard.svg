@@ -1,0 +1,127 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Nitish Kumar GitHub engineering activity dashboard</title>
+  <desc id="desc">A large animated dashboard highlighting more than 6.1 thousand lifetime contributions, more than 575 contributions in 2026, six years on GitHub, and engineering leadership at Twiinify.</desc>
+  <defs>
+    <linearGradient id="bg" x1="36" y1="20" x2="1164" y2="402" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111F"/>
+      <stop offset="0.52" stop-color="#0D1728"/>
+      <stop offset="1" stop-color="#160E2A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="80" y1="52" x2="1120" y2="358" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <radialGradient id="cyanGlow">
+      <stop stop-color="#22D3EE" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="violetGlow">
+      <stop stop-color="#A78BFA" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#93C5FD" stroke-opacity="0.045"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" rx="24" fill="url(#bg)"/>
+  <rect width="1200" height="420" rx="24" fill="url(#grid)"/>
+  <circle cx="84" cy="56" r="220" fill="url(#cyanGlow)">
+    <animate attributeName="r" values="200;240;200" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1110" cy="360" r="250" fill="url(#violetGlow)">
+    <animate attributeName="r" values="250;215;250" dur="9s" repeatCount="indefinite"/>
+  </circle>
+
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif">
+    <g transform="translate(58 46)">
+      <circle cx="20" cy="20" r="20" fill="#F8FAFC"/>
+      <path fill="#0D1117" d="M20 6.5a13.8 13.8 0 0 0-4.36 26.9c.69.13.94-.3.94-.66v-2.57c-3.84.83-4.65-1.63-4.65-1.63-.63-1.6-1.53-2.03-1.53-2.03-1.25-.85.1-.84.1-.84 1.38.1 2.1 1.42 2.1 1.42 1.23 2.1 3.22 1.5 4 1.15.13-.89.48-1.5.88-1.85-3.06-.35-6.28-1.53-6.28-6.82 0-1.5.54-2.74 1.42-3.7-.14-.35-.61-1.75.14-3.64 0 0 1.16-.37 3.8 1.41A13.2 13.2 0 0 1 20 13.18c1.17 0 2.34.16 3.44.46 2.64-1.78 3.8-1.41 3.8-1.41.75 1.89.28 3.29.14 3.64.88.96 1.42 2.2 1.42 3.7 0 5.3-3.23 6.46-6.3 6.81.5.43.94 1.27.94 2.56v3.8c0 .36.25.8.95.66A13.8 13.8 0 0 0 20 6.5Z"/>
+      <text x="58" y="17" fill="#F8FAFC" font-size="23" font-weight="750">ENGINEERING ACTIVITY</text>
+      <text x="58" y="39" fill="#8B949E" font-size="13" font-weight="600" letter-spacing="1.5">PUBLIC GITHUB SIGNALS  •  VERIFIED JULY 2026</text>
+      <g transform="translate(878 2)">
+        <rect width="146" height="36" rx="18" fill="#34D399" fill-opacity="0.11" stroke="#34D399" stroke-opacity="0.48"/>
+        <circle cx="19" cy="18" r="5" fill="#34D399">
+          <animate attributeName="opacity" values="1;0.35;1" dur="1.8s" repeatCount="indefinite"/>
+        </circle>
+        <text x="33" y="23" fill="#D1FAE5" font-size="12" font-weight="700" letter-spacing="1.1">LIVE PROFILE</text>
+      </g>
+    </g>
+
+    <g transform="translate(48 122)">
+      <g>
+        <rect width="260" height="214" rx="20" fill="#0B1220" stroke="#22D3EE" stroke-opacity="0.38"/>
+        <circle cx="42" cy="40" r="19" fill="#22D3EE" fill-opacity="0.12"/>
+        <path d="M33 40h18M42 31v18" stroke="#22D3EE" stroke-width="2.4" stroke-linecap="round"/>
+        <text x="26" y="105" fill="#F8FAFC" font-size="48" font-weight="780">6.1K+</text>
+        <text x="26" y="135" fill="#C9D1D9" font-size="16" font-weight="650">LIFETIME CONTRIBUTIONS</text>
+        <text x="26" y="159" fill="#64748B" font-size="12">Public contribution record since 2020</text>
+        <rect x="26" y="181" width="208" height="5" rx="2.5" fill="#172033"/>
+        <rect x="26" y="181" width="196" height="5" rx="2.5" fill="url(#bar)">
+          <animate attributeName="width" values="0;196;196" keyTimes="0;0.72;1" dur="2.8s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <g transform="translate(280)">
+        <rect width="260" height="214" rx="20" fill="#0B1220" stroke="#60A5FA" stroke-opacity="0.38"/>
+        <circle cx="42" cy="40" r="19" fill="#60A5FA" fill-opacity="0.12"/>
+        <rect x="34" y="32" width="16" height="16" rx="3" stroke="#60A5FA" stroke-width="2"/>
+        <path d="M34 37h16M39 29v6M45 29v6" stroke="#60A5FA" stroke-width="2" stroke-linecap="round"/>
+        <text x="26" y="105" fill="#F8FAFC" font-size="48" font-weight="780">575+</text>
+        <text x="26" y="135" fill="#C9D1D9" font-size="16" font-weight="650">CONTRIBUTIONS IN 2026</text>
+        <text x="26" y="159" fill="#64748B" font-size="12">Live total continues to update below</text>
+        <rect x="26" y="181" width="208" height="5" rx="2.5" fill="#172033"/>
+        <rect x="26" y="181" width="177" height="5" rx="2.5" fill="url(#bar)">
+          <animate attributeName="width" values="0;177;177" keyTimes="0;0.72;1" dur="2.6s" begin=".15s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <g transform="translate(560)">
+        <rect width="260" height="214" rx="20" fill="#0B1220" stroke="#818CF8" stroke-opacity="0.38"/>
+        <circle cx="42" cy="40" r="19" fill="#818CF8" fill-opacity="0.12"/>
+        <path d="M42 30v10l7 4" stroke="#A5B4FC" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="42" cy="40" r="12" stroke="#A5B4FC" stroke-width="2"/>
+        <text x="26" y="105" fill="#F8FAFC" font-size="48" font-weight="780">6 YEARS</text>
+        <text x="26" y="135" fill="#C9D1D9" font-size="16" font-weight="650">BUILDING ON GITHUB</text>
+        <text x="26" y="159" fill="#64748B" font-size="12">Long-term engineering activity</text>
+        <rect x="26" y="181" width="208" height="5" rx="2.5" fill="#172033"/>
+        <rect x="26" y="181" width="158" height="5" rx="2.5" fill="url(#bar)">
+          <animate attributeName="width" values="0;158;158" keyTimes="0;0.72;1" dur="2.5s" begin=".3s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <g transform="translate(840)">
+        <rect width="260" height="214" rx="20" fill="#0B1220" stroke="#A78BFA" stroke-opacity="0.42"/>
+        <circle cx="42" cy="40" r="19" fill="#A78BFA" fill-opacity="0.13"/>
+        <path d="M33 49V35l9-5 9 5v14M37 49v-8h10v8M39 35h1M44 35h1" stroke="#C4B5FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="26" y="105" fill="#F8FAFC" font-size="35" font-weight="780">TWIINIFY</text>
+        <text x="26" y="135" fill="#C9D1D9" font-size="16" font-weight="650">ENGINEERING LEADERSHIP</text>
+        <text x="26" y="159" fill="#64748B" font-size="12">Product, platform, and team ownership</text>
+        <rect x="26" y="181" width="208" height="5" rx="2.5" fill="#172033"/>
+        <rect x="26" y="181" width="208" height="5" rx="2.5" fill="url(#bar)">
+          <animate attributeName="opacity" values=".5;1;.5" dur="2.2s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
+
+    <g transform="translate(48 360)">
+      <path d="M0 10H1104" stroke="#334155" stroke-dasharray="3 9">
+        <animate attributeName="stroke-dashoffset" values="0;-48" dur="4s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="0" cy="10" r="4" fill="#22D3EE" filter="url(#glow)"/>
+      <circle cx="1104" cy="10" r="4" fill="#A78BFA" filter="url(#glow)"/>
+      <text x="552" y="38" text-anchor="middle" fill="#8B949E" font-size="12" letter-spacing="1.2">CONSISTENT DELIVERY  •  PRODUCT OWNERSHIP  •  RELIABLE SYSTEMS  •  CONTINUOUS LEARNING</text>
+    </g>
+  </g>
+
+  <rect x="0.75" y="0.75" width="1198.5" height="418.5" rx="23.25" stroke="url(#accent)" stroke-opacity="0.28" stroke-width="1.5"/>
+</svg>

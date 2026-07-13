@@ -301,16 +301,19 @@ I do more than implement isolated features. I turn incomplete ideas into clearly
 ## GitHub Activity
 
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=yaduvanshinitishkumar&theme=github_dark" width="96%" alt="Nitish Kumar's public GitHub contribution summary" />
+  <img src="./assets/activity-dashboard.svg" width="100%" alt="Nitish Kumar's engineering activity dashboard: 6.1K+ lifetime contributions, 575+ contributions in 2026, six years on GitHub, and engineering leadership at Twiinify" />
 </div>
 
-<div align="center">
-  <img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=yaduvanshinitishkumar&theme=github_dark" alt="Nitish Kumar's public GitHub stats" />
-  <img height="165" src="https://streak-stats.demolab.com?user=yaduvanshinitishkumar&theme=transparent&hide_border=true&ring=22D3EE&fire=A78BFA&currStreakLabel=22D3EE&sideLabels=C9D1D9&dates=8B949E" alt="Nitish Kumar's public GitHub streak" />
-</div>
+<br/>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=yaduvanshinitishkumar&bg_color=0d1117&color=8b949e&line=22d3ee&point=a78bfa&area=true&hide_border=true" width="96%" alt="Nitish Kumar's public contribution graph" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=yaduvanshinitishkumar&theme=github_dark&v=20260714" width="100%" alt="Live public GitHub contribution summary for Nitish Kumar at Twiinify" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=yaduvanshinitishkumar&bg_color=0d1117&color=8b949e&line=22d3ee&point=a78bfa&area=true&hide_border=true&custom_title=Contribution%20Momentum&v=20260714" width="100%" alt="Nitish Kumar's live public contribution momentum graph" />
 </div>
 
 <picture>
@@ -319,7 +322,9 @@ I do more than implement isolated features. I turn incomplete ideas into clearly
   <img alt="Animated public contribution graph" src="https://raw.githubusercontent.com/yaduvanshinitishkumar/yaduvanshinitishkumar/output/github-contribution-grid-snake.svg" width="100%" />
 </picture>
 
-<sub>Activity visualisations above reflect public GitHub data. The contribution animation is generated automatically from the same public record.</sub>
+<div align="center">
+  <sub><strong>One public record, one consistent story.</strong> Thresholds in the dashboard are conservative snapshots; the live summary and contribution animation continue to update from GitHub.</sub>
+</div>
 
 ---
 
