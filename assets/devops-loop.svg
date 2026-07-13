@@ -2,28 +2,188 @@
   <title id="title">DevOps continuous delivery loop</title>
   <desc id="desc">An animated continuous engineering loop through planning, building, testing, security, deployment, observation and improvement.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="270"><stop stop-color="#07111F"/><stop offset="0.55" stop-color="#0D1728"/><stop offset="1" stop-color="#071A20"/></linearGradient>
-    <linearGradient id="line" x1="65" y1="0" x2="1135" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#22D3EE"/><stop offset="0.5" stop-color="#60A5FA"/><stop offset="1" stop-color="#34D399"/></linearGradient>
-    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" stroke="#93C5FD" stroke-opacity="0.04"/></pattern>
+    <!-- Fonts -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap');
+      .font-sans { font-family: 'Outfit', 'Inter', -apple-system, sans-serif; }
+      .font-mono { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+    </style>
+
+    <!-- Gradients -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="270" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#030712"/>
+      <stop offset="0.5" stop-color="#0b0f19"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+
+    <!-- Outer Border Beam Gradient -->
+    <linearGradient id="outerBorderBeam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#22D3EE" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#60A5FA" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Loop Track Gradient -->
+    <linearGradient id="loopGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="25%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#60A5FA"/>
+      <stop offset="75%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+
+    <!-- Radial Glows for background warmth -->
+    <radialGradient id="glowLeft" cx="300" cy="135" r="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE" stop-opacity="0.13"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowRight" cx="900" cy="135" r="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A78BFA" stop-opacity="0.12"/><stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowCenter" cx="600" cy="135" r="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA" stop-opacity="0.08"/><stop offset="1" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Dot Pattern -->
+    <pattern id="dotGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#3b82f6" fill-opacity="0.06"/>
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="1200" height="270" rx="20" fill="url(#bg)"/><rect width="1200" height="270" rx="20" fill="url(#grid)"/>
-  <text x="52" y="47" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700">CONTINUOUS DELIVERY — OPERATING LOOP</text>
-  <text x="52" y="72" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="13" letter-spacing="1.2">AUTOMATION CREATES SPEED; FEEDBACK CREATES CONFIDENCE</text>
-  <path d="M83 151C83 100 135 93 207 93H500C555 93 576 118 600 151C624 184 645 209 700 209H993C1065 209 1117 202 1117 151C1117 100 1065 93 993 93H700C645 93 624 118 600 151C576 184 555 209 500 209H207C135 209 83 202 83 151Z" stroke="#334155" stroke-width="2" stroke-opacity="0.7"/>
-  <path id="loopPath" d="M83 151C83 100 135 93 207 93H500C555 93 576 118 600 151C624 184 645 209 700 209H993C1065 209 1117 202 1117 151C1117 100 1065 93 993 93H700C645 93 624 118 600 151C576 184 555 209 500 209H207C135 209 83 202 83 151Z" stroke="url(#line)" stroke-width="3" stroke-opacity="0.82" stroke-dasharray="10 11">
-    <animate attributeName="stroke-dashoffset" values="0;-84" dur="4.5s" repeatCount="indefinite"/>
-  </path>
-  <g font-family="Inter, system-ui, sans-serif" text-anchor="middle">
-    <g transform="translate(164 122)"><circle r="29" fill="#0B1320" stroke="#22D3EE"/><path d="M-9 1L-3 7L10-8" stroke="#22D3EE" stroke-width="2" fill="none"/><text y="49" fill="#CBD5E1" font-size="13" font-weight="700">PLAN</text></g>
-    <g transform="translate(362 122)"><circle r="29" fill="#0B1320" stroke="#38BDF8"/><path d="M-10-7H10V8H-10Z M-5-11V-7M5-11V-7" stroke="#38BDF8" stroke-width="1.7"/><text y="49" fill="#CBD5E1" font-size="13" font-weight="700">BUILD</text></g>
-    <g transform="translate(520 164)"><circle r="29" fill="#0B1320" stroke="#60A5FA"/><path d="M-9 0L-3 6L10-8" stroke="#60A5FA" stroke-width="2" fill="none"/><text y="49" fill="#CBD5E1" font-size="13" font-weight="700">TEST</text></g>
-    <g transform="translate(680 164)"><circle r="29" fill="#0B1320" stroke="#818CF8"/><path d="M0-11L10-7V1C10 8 5 12 0 15C-5 12-10 8-10 1V-7Z" stroke="#818CF8" stroke-width="1.7" fill="none"/><text y="49" fill="#CBD5E1" font-size="13" font-weight="700">SECURE</text></g>
-    <g transform="translate(838 122)"><circle r="29" fill="#0B1320" stroke="#A78BFA"/><path d="M0-12L10 3L3 2L0 13L-3 2L-10 3Z" stroke="#A78BFA" stroke-width="1.5" fill="none"/><text y="49" fill="#CBD5E1" font-size="13" font-weight="700">DEPLOY</text></g>
-    <g transform="translate(1036 122)"><circle r="29" fill="#0B1320" stroke="#34D399"/><path d="M-12 2C-6-7 6-7 12 2C6 11-6 11-12 2Z" stroke="#34D399" stroke-width="1.5" fill="none"/><circle cy="2" r="4" stroke="#34D399"/><text y="49" fill="#CBD5E1" font-size="13" font-weight="700">OBSERVE</text></g>
+
+  <!-- Background Base -->
+  <rect width="1200" height="270" rx="20" fill="url(#bg)"/>
+  <rect width="1200" height="270" rx="20" fill="url(#dotGrid)"/>
+
+  <!-- Background Glows -->
+  <circle cx="300" cy="135" r="220" fill="url(#glowLeft)"/>
+  <circle cx="900" cy="135" r="220" fill="url(#glowRight)"/>
+  <circle cx="600" cy="135" r="180" fill="url(#glowCenter)"/>
+
+  <!-- Title & Subtitle -->
+  <g class="font-sans" transform="translate(52, 47)">
+    <text x="0" y="0" fill="#F8FAFC" font-size="20" font-weight="700" letter-spacing="-0.5">CONTINUOUS DELIVERY — OPERATING LOOP</text>
+    <text x="0" y="24" fill="#64748B" font-size="12" font-weight="600" letter-spacing="1.5">AUTOMATION CREATES SPEED; FEEDBACK CREATES CONFIDENCE</text>
   </g>
-  <circle r="5" fill="#F8FAFC" filter="url(#glow)"><animateMotion dur="8s" repeatCount="indefinite"><mpath href="#loopPath"/></animateMotion></circle>
-  <circle r="3" fill="#34D399"><animateMotion dur="8s" begin="-4s" repeatCount="indefinite"><mpath href="#loopPath"/></animateMotion></circle>
-  <text x="600" y="249" text-anchor="middle" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">measure → learn → improve → repeat</text>
-  <rect x="0.75" y="0.75" width="1198.5" height="268.5" rx="19.25" stroke="url(#line)" stroke-opacity="0.24" stroke-width="1.5"/>
+
+  <!-- DevOps Infinity Loop Path -->
+  <!-- Base track (Dark slate) -->
+  <path d="M83 151C83 100 135 93 207 93H500C555 93 576 118 600 151C624 184 645 209 700 209H993C1065 209 1117 202 1117 151C1117 100 1065 93 993 93H700C645 93 624 118 600 151C576 184 555 209 500 209H207C135 209 83 202 83 151Z" stroke="#1e293b" stroke-width="3" stroke-opacity="0.6"/>
+  <!-- Glowing Overlay (Animated Loop Beam) -->
+  <path id="loopPath" d="M83 151C83 100 135 93 207 93H500C555 93 576 118 600 151C624 184 645 209 700 209H993C1065 209 1117 202 1117 151C1117 100 1065 93 993 93H700C645 93 624 118 600 151C576 184 555 209 500 209H207C135 209 83 202 83 151Z" stroke="url(#loopGrad)" stroke-width="3" stroke-dasharray="150 900" stroke-linecap="round">
+    <animate attributeName="stroke-dashoffset" values="1050;0" dur="6s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Flying Glowing Particles -->
+  <g filter="url(#softGlow)">
+    <circle r="4.5" fill="#F8FAFC">
+      <animateMotion dur="7s" repeatCount="indefinite"><mpath href="#loopPath"/></animateMotion>
+    </circle>
+    <circle r="3" fill="#34D399">
+      <animateMotion dur="7s" begin="-3.5s" repeatCount="indefinite"><mpath href="#loopPath"/></animateMotion>
+    </circle>
+  </g>
+
+  <!-- Nodes (PLAN, BUILD, TEST, SECURE, DEPLOY, OBSERVE) -->
+  <g class="font-sans" text-anchor="middle">
+    <!-- PLAN (Git) -->
+    <g transform="translate(164, 122)">
+      <!-- Outer Pulse Ring -->
+      <circle r="34" fill="none" stroke="#22D3EE" stroke-width="1.5" stroke-opacity="0.15">
+        <animate attributeName="r" values="32;37;32" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-opacity" values="0.25;0.05;0.25" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <!-- Core Badge -->
+      <circle r="29" fill="#080D16" stroke="#22D3EE" stroke-width="1.5"/>
+      <!-- Brand Icon (Git) -->
+      <svg x="-12" y="-12" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M13.09 23.549a1.54 1.54 0 0 1-2.18 0L.451 13.089a1.54 1.54 0 0 1 0-2.179l7.191-7.19 2.733 2.733a1.85 1.85 0 0 0 .964 2.326v6.66a1.849 1.849 0 1 0 1.54 0V8.957l2.508 2.508a1.85 1.85 0 1 0 1.09-1.09l-2.634-2.634a1.85 1.85 0 0 0-2.378-2.377L8.73 2.63 10.91.451a1.54 1.54 0 0 1 2.179 0l10.459 10.46a1.54 1.54 0 0 1 0 2.179z" fill="#22D3EE"/>
+      </svg>
+      <text y="50" fill="#E2E8F0" font-size="13" font-weight="700" letter-spacing="1">PLAN</text>
+    </g>
+
+    <!-- BUILD (Docker) -->
+    <g transform="translate(362, 122)">
+      <circle r="34" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-opacity="0.15">
+        <animate attributeName="r" values="32;37;32" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-opacity" values="0.25;0.05;0.25" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="29" fill="#080D16" stroke="#38BDF8" stroke-width="1.5"/>
+      <!-- Brand Icon (Docker) -->
+      <svg x="-12" y="-12" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z" fill="#38BDF8"/>
+      </svg>
+      <text y="50" fill="#E2E8F0" font-size="13" font-weight="700" letter-spacing="1">BUILD</text>
+    </g>
+
+    <!-- TEST (Cypress) -->
+    <g transform="translate(520, 164)">
+      <circle r="34" fill="none" stroke="#60A5FA" stroke-width="1.5" stroke-opacity="0.15">
+        <animate attributeName="r" values="32;37;32" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-opacity" values="0.25;0.05;0.25" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="29" fill="#080D16" stroke="#60A5FA" stroke-width="1.5"/>
+      <!-- Brand Icon (Cypress) -->
+      <svg x="-12" y="-12" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M11.998.0195c-.8642 0-1.6816.1101-2.1445.1934v.002C4.1731 1.2283 0 6.1368 0 12.0018c0 1.1265.1573 2.2328.4648 3.3028.0387.1453.0915.2993.1368.4473 1.607 4.865 6.2245 8.226 11.3925 8.2285.0651 0 .2518-.0003.502-.0118.8564-.0353 1.6228-.5734 1.9512-1.369l.4736-1.1544L20.4258 8.043H18.621l-2.3164 5.871-2.334-5.871h-1.9082l3.2734 8.0117c-.8115 1.9702-1.6252 3.9395-2.4355 5.9101-.0808.1945-.2655.3284-.4727.336-.144.005-.285.0098-.4316.0098-4.5848 0-8.6672-3.0695-9.9277-7.4649a10.3058 10.3058 0 0 1-.3985-2.8437c0-5.0887 3.6521-9.3404 8.6035-10.164.2214-.037.8885-.1446 1.7246-.1446 4.4166 0 8.269 2.732 9.7305 6.8476.0558.144.0977.293.1465.4395.299.9746.4531 1.9887.4531 3.0215 0 4.5696-2.9413 8.5326-7.3164 9.8613l.4863 1.5996c5.085-1.546 8.4995-6.1518 8.502-11.459 0-1.5491-.2983-2.8706-.6504-3.8926-.0432-.1212-.0873-.2422-.1309-.3633h-.002C21.4577 3.0954 17.0444.0195 11.998.0195ZM8.4336 7.8906c-1.1999 0-2.1747.3852-2.9805 1.1758-.8007.7856-1.205 1.7736-1.205 2.9356 0 1.1544.4068 2.1368 1.205 2.9199.8058.7906 1.7806 1.1738 2.9805 1.1738 1.705 0 3.1556-.955 3.7871-2.4883l.0332-.082-1.6289-.5547c-.168.4563-.7552 1.4883-2.1914 1.4883-.6745 0-1.2437-.2344-1.6934-.6992-.4572-.4699-.6875-1.0632-.6875-1.7578 0-.6998.2253-1.2809.6875-1.7735.4522-.4648 1.019-.7012 1.6934-.7012 1.438 0 2.0238 1.0815 2.1934 1.4883l1.627-.5527-.0333-.084c-.629-1.5358-2.082-2.4883-3.7871-2.4883Z" fill="#60A5FA"/>
+      </svg>
+      <text y="50" fill="#E2E8F0" font-size="13" font-weight="700" letter-spacing="1">TEST</text>
+    </g>
+
+    <!-- SECURE (Snyk) -->
+    <g transform="translate(680, 164)">
+      <circle r="34" fill="none" stroke="#818CF8" stroke-width="1.5" stroke-opacity="0.15">
+        <animate attributeName="r" values="32;37;32" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-opacity" values="0.25;0.05;0.25" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="29" fill="#080D16" stroke="#818CF8" stroke-width="1.5"/>
+      <!-- Brand Icon (Snyk) -->
+      <svg x="-12" y="-12" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M17.097 13.344c.143-.37.06-2.117-.222-4.675l-.004-.04.904-2.431v-.05c0-1.06-1.374-3.9-2.186-5.41L15.192 0l-.84 5.854-.503.829-.125-.042c-.351-.118-1.042-.316-1.728-.316-.65 0-1.294.171-1.72.315l-.125.042-.504-.827L8.807 0l-.396.737c-.812 1.51-2.186 4.35-2.186 5.411v.05l.904 2.432-.004.039c-.283 2.558-.366 4.305-.222 4.674.13.332.642 1.041 1.072 1.605l-.619 5.724.617.442.576-5.329c.012.414.064 1.277.275 2.068l-.389 3.592L12 24l4.279-3.067.375-.268-.62-5.73c.428-.561.934-1.262 1.063-1.591zM15.59 2.298c.694 1.408 1.421 3.08 1.471 3.779l-.388 1.045c-.935-1.31-1.228-3.441-1.253-3.636zm-1.124 7.8c.84 0 .212.712.138.792h-1.587c.144-.18.69-.792 1.45-.792zm-.452 1.468a.178.178 0 0 1-.175.153.292.292 0 1 0 .441-.31h.504v.024a.662.662 0 0 1-1.325 0v-.025h.511l-.008.007c.039.038.06.093.052.15zM12.39 19.29c.097.064.2.115.306.156-.168.19-.399.287-.697.287-.299 0-.53-.097-.697-.288.107-.04.21-.092.306-.156a.573.573 0 0 0 .391.114c.103 0 .255 0 .391-.113zm-2.62-7.724a.178.178 0 0 1-.174.153.292.292 0 1 0 .441-.31h.504v.024a.662.662 0 0 1-1.326 0v-.025h.511l-.008.007c.039.038.06.093.052.15zm-.374-.676c-.074-.08-.702-.792.138-.792.759 0 1.305.612 1.45.792zM6.948 6.077c.05-.699.778-2.37 1.471-3.78l.185 1.29c-.07.48-.393 2.37-1.257 3.56zM9.473 18.09c-.373-1.02-.377-2.446-.377-2.507v-.097l-.06-.076c-.551-.683-1.477-1.9-1.616-2.257l-.005-.014c-.124-.43.1-2.997.268-4.513l.008-.066-.187-.502.07-.075c.476-.497.88-1.213 1.203-2.126L9 5.223l.118.82.807 1.326.22-.094c.009-.004.934-.4 1.851-.4H12v.44h-.004c-.812 0-1.669.36-1.677.363l-.571.246-.797-1.308c-.27.62-.585 1.137-.94 1.543l.129.347-.019.169c-.24 2.156-.348 4.044-.285 4.332.086.2.523.812 1 1.437l.748-.218 1.17-1.334.184 3.458c-.011.015-.28.393-.28.609 0 .235.344.541.685.786.005-.01.007-.02.013-.03.12-.212.275-.251.346-.087.04.092.028.369.028.369l.005.002v.328c-.013.027-.302.674-1.014.674-.275 0-.948-.089-1.248-.911zm2.536 2.409c-.527 0-1.297-.257-1.374-.952.029.001.057.003.086.003.06 0 .119-.003.177-.01.235.455.665.6 1.102.6.436 0 .865-.146 1.1-.6.059.007.119.01.18.01.029 0 .057-.002.085-.003-.076.695-.835.952-1.356.952zm2.956-5.09l-.061.077v.097c0 .06-.004 1.487-.377 2.507-.3.822-.973.91-1.248.91-.71 0-1.002-.658-1.014-.686V18l.005-.004s-.012-.276.028-.368c.07-.164.226-.126.346.088.006.009.009.02.013.03.34-.246.686-.552.686-.787 0-.216-.269-.593-.28-.61l.183-3.457 1.17 1.334 1.2.35c-.23.304-.463.6-.651.834zm-8.472-1.907c-.22-.563-.022-2.916.187-4.817l-.895-2.409v-.128c0-.312.095-.734.246-1.207-1.177.253-1.808.49-1.808.49v12.996l2.67 1.914.577-5.332c-.538-.718-.868-1.226-.977-1.507zm3.853-7.346c.446-.136 1.042-.27 1.65-.27.61 0 1.21.135 1.658.27l.276-.453.184-1.288s-1.288-.068-2.103-.068c-.759 0-1.467.026-2.125.07l.184 1.286zm7.623-1.217c.151.474.247.896.247 1.21v.127l-.895 2.409c.208 1.901.406 4.253.186 4.818-.109.279-.435.782-.968 1.493l.578 5.337 2.66-1.906V5.432s-.632-.24-1.808-.493Z" fill="#818CF8"/>
+      </svg>
+      <text y="50" fill="#E2E8F0" font-size="13" font-weight="700" letter-spacing="1">SECURE</text>
+    </g>
+
+    <!-- DEPLOY (Kubernetes) -->
+    <g transform="translate(838, 122)">
+      <circle r="34" fill="none" stroke="#A78BFA" stroke-width="1.5" stroke-opacity="0.15">
+        <animate attributeName="r" values="32;37;32" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-opacity" values="0.25;0.05;0.25" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="29" fill="#080D16" stroke="#A78BFA" stroke-width="1.5"/>
+      <!-- Brand Icon (Kubernetes) -->
+      <svg x="-12" y="-12" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M10.204 14.35l.007.01-.999 2.413a5.171 5.171 0 0 1-2.075-2.597l2.578-.437.004.005a.44.44 0 0 1 .484.606zm-.833-2.129a.44.44 0 0 0 .173-.756l.002-.011L7.585 9.7a5.143 5.143 0 0 0-.73 3.255l2.514-.725.002-.009zm1.145-1.98a.44.44 0 0 0 .699-.337l.01-.005.15-2.62a5.144 5.144 0 0 0-3.01 1.442l2.147 1.523.004-.002zm.76 2.75l.723.349.722-.347.18-.78-.5-.623h-.804l-.5.623.179.779zm1.5-3.095a.44.44 0 0 0 .7.336l.008.003 2.134-1.513a5.188 5.188 0 0 0-2.992-1.442l.148 2.615.002.001zm10.876 5.97l-5.773 7.181a1.6 1.6 0 0 1-1.248.594l-9.261.003a1.6 1.6 0 0 1-1.247-.596l-5.776-7.18a1.583 1.583 0 0 1-.307-1.34L2.1 5.573c.108-.47.425-.864.863-1.073L11.305.513a1.606 1.606 0 0 1 1.385 0l8.345 3.985c.438.209.755.604.863 1.073l2.062 8.955c.108.47-.005.963-.308 1.34zm-3.289-2.057c-.042-.01-.103-.026-.145-.034-.174-.033-.315-.025-.479-.038-.35-.037-.638-.067-.895-.148-.105-.04-.18-.165-.216-.216l-.201-.059a6.45 6.45 0 0 0-.105-2.332 6.465 6.465 0 0 0-.936-2.163c.052-.047.15-.133.177-.159.008-.09.001-.183.094-.282.197-.185.444-.338.743-.522.142-.084.273-.137.415-.242.032-.024.076-.062.11-.089.24-.191.295-.52.123-.736-.172-.216-.506-.236-.745-.045-.034.027-.08.062-.111.088-.134.116-.217.23-.33.35-.246.25-.45.458-.673.609-.097.056-.239.037-.303.033l-.19.135a6.545 6.545 0 0 0-4.146-2.003l-.012-.223c-.065-.062-.143-.115-.163-.25-.022-.268.015-.557.057-.905.023-.163.061-.298.068-.475.001-.04-.001-.099-.001-.142 0-.306-.224-.555-.5-.555-.275 0-.499.249-.499.555l.001.014c0 .041-.002.092 0 .128.006.177.044.312.067.475.042.348.078.637.056.906a.545.545 0 0 1-.162.258l-.012.211a6.424 6.424 0 0 0-4.166 2.003 8.373 8.373 0 0 1-.18-.128c-.09.012-.18.04-.297-.029-.223-.15-.427-.358-.673-.608-.113-.12-.195-.234-.329-.349-.03-.026-.077-.062-.111-.088a.594.594 0 0 0-.348-.132.481.481 0 0 0-.398.176c-.172.216-.117.546.123.737l.007.005.104.083c.142.105.272.159.414.242.299.185.546.338.743.522.076.082.09.226.1.288l.16.143a6.462 6.462 0 0 0-1.02 4.506l-.208.06c-.055.072-.133.184-.215.217-.257.081-.546.11-.895.147-.164.014-.305.006-.48.039-.037.007-.09.02-.133.03l-.004.002-.007.002c-.295.071-.484.342-.423.608.061.267.349.429.645.365l.007-.001.01-.003.129-.029c.17-.046.294-.113.448-.172.33-.118.604-.217.87-.256.112-.009.23.069.288.101l.217-.037a6.5 6.5 0 0 0 2.88 3.596l-.09.218c.033.084.069.199.044.282-.097.252-.263.517-.452.813-.091.136-.185.242-.268.399-.02.037-.045.095-.064.134-.128.275-.034.591.213.71.248.12.556-.007.69-.282v-.002c.02-.039.046-.09.062-.127.07-.162.094-.301.144-.458.132-.332.205-.68.387-.897.05-.06.13-.082.215-.105l.113-.205a6.453 6.453 0 0 0 4.609.012l.106.192c.086.028.18.042.256.155.136.232.229.507.342.84.05.156.074.295.145.457.016.037.043.09.062.129.133.276.442.402.69.282.247-.118.341-.435.213-.71-.02-.039-.045-.096-.065-.134-.083-.156-.177-.261-.268-.398-.19-.296-.346-.541-.443-.793-.04-.13.007-.21.038-.294-.018-.022-.059-.144-.083-.202a6.499 6.499 0 0 0 2.88-3.622c.064.01.176.03.213.038.075-.05.144-.114.28-.104.266.039.54.138.87.256.154.06.277.128.448.173.036.01.088.019.13.028l.009.003.007.001c.297.064.584-.098.645-.365.06-.266-.128-.537-.423-.608zM16.4 9.701l-1.95 1.746v.005a.44.44 0 0 0 .173.757l.003.01 2.526.728a5.199 5.199 0 0 0-.108-1.674A5.208 5.208 0 0 0 16.4 9.7zm-4.013 5.325a.437.437 0 0 0-.404-.232.44.44 0 0 0-.372.233h-.002l-1.268 2.292a5.164 5.164 0 0 0 3.326.003l-1.27-2.296h-.01zm1.888-1.293a.44.44 0 0 0-.27.036.44.44 0 0 0-.214.572l-.003.004 1.01 2.438a5.15 5.15 0 0 0 2.081-2.615l-2.6-.44-.004.005z" fill="#A78BFA"/>
+      </svg>
+      <text y="50" fill="#E2E8F0" font-size="13" font-weight="700" letter-spacing="1">DEPLOY</text>
+    </g>
+
+    <!-- OBSERVE (Grafana) -->
+    <g transform="translate(1036, 122)">
+      <circle r="34" fill="none" stroke="#34D399" stroke-width="1.5" stroke-opacity="0.15">
+        <animate attributeName="r" values="32;37;32" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-opacity" values="0.25;0.05;0.25" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="29" fill="#080D16" stroke="#34D399" stroke-width="1.5"/>
+      <!-- Brand Icon (Grafana) -->
+      <svg x="-12" y="-12" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M23.02 10.59a8.578 8.578 0 0 0-.862-3.034 8.911 8.911 0 0 0-1.789-2.445c.337-1.342-.413-2.505-.413-2.505-1.292-.08-2.113.4-2.416.62-.052-.02-.102-.044-.154-.064-.22-.089-.446-.172-.677-.247-.231-.073-.47-.14-.711-.197a9.867 9.867 0 0 0-.875-.161C14.557.753 12.94 0 12.94 0c-1.804 1.145-2.147 2.744-2.147 2.744l-.018.093c-.098.029-.2.057-.298.088-.138.042-.275.094-.413.143-.138.055-.275.107-.41.166a8.869 8.869 0 0 0-1.557.87l-.063-.029c-2.497-.955-4.716.195-4.716.195-.203 2.658.996 4.33 1.235 4.636a11.608 11.608 0 0 0-.607 2.635C1.636 12.677.953 15.014.953 15.014c1.926 2.214 4.171 2.351 4.171 2.351.003-.002.006-.002.006-.005.285.509.615.994.986 1.446.156.19.32.371.488.548-.704 2.009.099 3.68.099 3.68 2.144.08 3.553-.937 3.849-1.173a9.784 9.784 0 0 0 3.164.501h.08l.055-.003.107-.002.103-.005.003.002c1.01 1.44 2.788 1.646 2.788 1.646 1.264-1.332 1.337-2.653 1.337-2.94v-.058c0-.02-.003-.039-.003-.06.265-.187.52-.387.758-.6a7.875 7.875 0 0 0 1.415-1.7c1.43.083 2.437-.885 2.437-.885-.236-1.49-1.085-2.216-1.264-2.354l-.018-.013-.016-.013a.217.217 0 0 1-.031-.02c.008-.092.016-.18.02-.27.011-.162.016-.323.016-.48v-.253l-.005-.098-.008-.135a1.891 1.891 0 0 0-.01-.13c-.003-.042-.008-.083-.013-.125l-.016-.124-.018-.122a6.215 6.215 0 0 0-2.032-3.73 6.015 6.015 0 0 0-3.222-1.46 6.292 6.292 0 0 0-.85-.048l-.107.002h-.063l-.044.003-.104.008a4.777 4.777 0 0 0-3.335 1.695c-.332.4-.592.84-.768 1.297a4.594 4.594 0 0 0-.312 1.817l.003.091c.005.055.007.11.013.164a3.615 3.615 0 0 0 .698 1.82 3.53 3.53 0 0 0 1.827 1.282c.33.098.66.14.971.137.039 0 .078 0 .114-.002l.063-.003c.02 0 .041-.003.062-.003.034-.002.065-.007.099-.01.007 0 .018-.003.028-.003l.031-.005.06-.008a1.18 1.18 0 0 0 .112-.02c.036-.008.072-.013.109-.024a2.634 2.634 0 0 0 .914-.415c.028-.02.056-.041.085-.065a.248.248 0 0 0 .039-.35.244.244 0 0 0-.309-.06l-.078.042c-.09.044-.184.083-.283.116a2.476 2.476 0 0 1-.475.096c-.028.003-.054.006-.083.006l-.083.002c-.026 0-.054 0-.08-.002l-.102-.006h-.012l-.024.006c-.016-.003-.031-.003-.044-.006-.031-.002-.06-.007-.091-.01a2.59 2.59 0 0 1-.724-.213 2.557 2.557 0 0 1-.667-.438 2.52 2.52 0 0 1-.805-1.475 2.306 2.306 0 0 1-.029-.444l.006-.122v-.023l.002-.031c.003-.021.003-.04.005-.06a3.163 3.163 0 0 1 1.352-2.29 3.12 3.12 0 0 1 .937-.43 2.946 2.946 0 0 1 .776-.101h.06l.07.002.045.003h.026l.07.005a4.041 4.041 0 0 1 1.635.49 3.94 3.94 0 0 1 1.602 1.662 3.77 3.77 0 0 1 .397 1.414l.005.076.003.075c.002.026.002.05.002.075 0 .024.003.052 0 .07v.065l-.002.073-.008.174a6.195 6.195 0 0 1-.08.639 5.1 5.1 0 0 1-.267.927 5.31 5.31 0 0 1-.624 1.13 5.052 5.052 0 0 1-3.237 2.014 4.82 4.82 0 0 1-.649.066l-.039.003h-.287a6.607 6.607 0 0 1-1.716-.265 6.776 6.776 0 0 1-3.4-2.274 6.75 6.75 0 0 1-.746-1.15 6.616 6.616 0 0 1-.714-2.596l-.005-.083-.002-.02v-.056l-.003-.073v-.096l-.003-.104v-.07l.003-.163c.008-.22.026-.45.054-.678a8.707 8.707 0 0 1 .28-1.355c.128-.444.286-.872.473-1.277a7.04 7.04 0 0 1 1.456-2.1 5.925 5.925 0 0 1 .953-.763c.169-.111.343-.213.524-.306.089-.05.182-.091.273-.135.047-.02.093-.042.138-.062a7.177 7.177 0 0 1 .714-.267l.145-.045c.049-.015.098-.026.148-.041.098-.029.197-.052.296-.076.049-.013.1-.02.15-.033l.15-.032.151-.028.076-.013.075-.01.153-.024c.057-.01.114-.013.171-.023l.169-.021c.036-.003.073-.008.106-.01l.073-.008.036-.003.042-.002c.057-.003.114-.008.171-.01l.086-.006h.023l.037-.003.145-.007a7.999 7.999 0 0 1 1.708.125 7.917 7.917 0 0 1 2.048.68 8.253 8.253 0 0 1 1.672 1.09l.09.077.089.078c.06.052.114.107.171.159.057.052.112.106.166.16.052.055.107.107.159.164a8.671 8.671 0 0 1 1.41 1.978c.012.026.028.052.04.078l.04.078.075.156c.023.051.05.1.07.153l.065.15a8.848 8.848 0 0 1 .45 1.34.19.19 0 0 0 .201.142.186.186 0 0 0 .172-.184c.01-.246.002-.532-.024-.856z" fill="#34D399"/>
+      </svg>
+      <text y="50" fill="#E2E8F0" font-size="13" font-weight="700" letter-spacing="1">OBSERVE</text>
+    </g>
+  </g>
+
+  <!-- Footer Loop Text -->
+  <text x="600" y="248" text-anchor="middle" fill="#64748B" class="font-mono" font-size="11.5" letter-spacing="1">measure → learn → improve → repeat</text>
+
+  <!-- Outer Border Beam (Glow Ring) -->
+  <rect x="0.5" y="0.5" width="1199" height="269" rx="20" fill="none" stroke="url(#outerBorderBeam)" stroke-width="2" stroke-dasharray="200 1200">
+    <animate attributeName="stroke-dashoffset" values="1400;0" dur="10s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0.75" y="0.75" width="1198.5" height="268.5" rx="19.25" stroke="#1e293b" stroke-width="1.5" stroke-opacity="0.6"/>
 </svg>

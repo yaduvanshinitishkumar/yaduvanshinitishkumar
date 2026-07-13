@@ -197,7 +197,7 @@ I do more than implement isolated features. I turn incomplete ideas into clearly
   <summary><strong>Cloud, DevOps, observability, and delivery</strong></summary>
   <br/>
   <p align="center">
-    <img src="https://skillicons.dev/icons?i=aws,docker,kubernetes,terraform,githubactions,linux,nginx,bash&theme=dark" alt="AWS, Docker, Kubernetes, Terraform, GitHub Actions, Linux, Nginx and Bash" /><br/><br/>
+    <img src="https://skillicons.dev/icons?i=aws,gcp,docker,kubernetes,terraform,jenkins,githubactions,linux,nginx,bash&theme=dark" alt="AWS, GCP, Docker, Kubernetes, Terraform, Jenkins, GitHub Actions, Linux, Nginx and Bash" /><br/><br/>
     <img src="https://skillicons.dev/icons?i=kafka,prometheus,grafana,git,github&theme=dark" alt="Kafka, Prometheus, Grafana, Git and GitHub" />
     <img src="https://img.shields.io/badge/Argo_CD-EF7B4D?style=for-the-badge&logo=argo&logoColor=white" alt="Argo CD" />
   </p>
@@ -207,10 +207,13 @@ I do more than implement isolated features. I turn incomplete ideas into clearly
   <summary><strong>Data, machine learning, and AI engineering</strong></summary>
   <br/>
   <p align="center">
-    <img src="https://skillicons.dev/icons?i=mysql,mongodb,tensorflow,jupyter&theme=dark" alt="MySQL, MongoDB, TensorFlow and Jupyter" /><br/><br/>
+    <img src="https://skillicons.dev/icons?i=mysql,mongodb,redis,tensorflow,jupyter&theme=dark" alt="MySQL, MongoDB, Redis, TensorFlow and Jupyter" /><br/><br/>
     <img src="https://img.shields.io/badge/Oracle_Database-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle Database" />
+    <img src="https://img.shields.io/badge/Apache_Cassandra-1287B1?style=for-the-badge&logo=apachecassandra&logoColor=white" alt="Apache Cassandra" />
     <img src="https://img.shields.io/badge/OpenAI-LLM_Engineering-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI and LLM engineering" />
-    <img src="https://img.shields.io/badge/LangChain-Agent_Orchestration-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain agent orchestration" />
+    <img src="https://img.shields.io/badge/LangChain-Orchestration-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain agent orchestration" />
+    <img src="https://img.shields.io/badge/LangGraph-Agent_Frameworks-0052CC?style=for-the-badge&logo=langchain&logoColor=white" alt="LangGraph agent frameworks" />
+    <img src="https://img.shields.io/badge/CrewAI-Multi_Agent_Systems-FF3366?style=for-the-badge" alt="CrewAI multi agent systems" />
     <img src="https://img.shields.io/badge/Hugging_Face-Model_Ecosystem-FFD21E?style=for-the-badge&logo=huggingface&logoColor=111827" alt="Hugging Face model ecosystem" />
     <img src="https://img.shields.io/badge/RAG-Retrieval_Engineering-0F766E?style=for-the-badge&logo=semanticweb&logoColor=white" alt="RAG and retrieval engineering" />
     <img src="https://img.shields.io/badge/AI_Agents-Tools_%26_Memory-6D28D9?style=for-the-badge&logo=probot&logoColor=white" alt="AI agents, tools and memory" />
@@ -228,6 +231,17 @@ I do more than implement isolated features. I turn incomplete ideas into clearly
     <img src="https://img.shields.io/badge/Team_Leadership-111827?style=for-the-badge&logo=collaboraonline&logoColor=A78BFA" alt="Team leadership" />
     <img src="https://img.shields.io/badge/Cross_Functional_Delivery-111827?style=for-the-badge&logo=task&logoColor=22D3EE" alt="Cross-functional delivery" />
     <img src="https://img.shields.io/badge/Technical_Education-111827?style=for-the-badge&logo=youtube&logoColor=FF0000" alt="Technical education" />
+  </p>
+</details>
+
+<details>
+  <summary><strong>Creative, design, and media capabilities</strong></summary>
+  <br/>
+  <p align="center">
+    <img src="https://skillicons.dev/icons?i=figma,ps,ai,pr,ae&theme=dark" alt="Figma, Photoshop, Illustrator, Premiere Pro and After Effects" /><br/><br/>
+    <img src="https://img.shields.io/badge/Adobe_Creative_Cloud-Creative_Suites-DA1F26?style=for-the-badge&logo=adobe&logoColor=white" alt="Adobe Creative Cloud" />
+    <img src="https://img.shields.io/badge/Graphic_Design-Visual_Branding-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Graphic Design" />
+    <img src="https://img.shields.io/badge/Video_Editing-Motion_Graphics-005C84?style=for-the-badge&logo=adobepremierepro&logoColor=white" alt="Video Editing" />
   </p>
 </details>
 
