@@ -1,0 +1,75 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Agentic AI engineering pipeline</title>
+  <desc id="desc">An animated flow from user goal through planning, context, tools, evaluation and a reliable response.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111F"/><stop offset="0.52" stop-color="#0D1728"/><stop offset="1" stop-color="#160E2A"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="72" y1="0" x2="1128" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/><stop offset="0.52" stop-color="#60A5FA"/><stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#93C5FD" stroke-opacity="0.045"/></pattern>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#64748B"/></marker>
+  </defs>
+  <rect width="1200" height="300" rx="20" fill="url(#bg)"/>
+  <rect width="1200" height="300" rx="20" fill="url(#grid)"/>
+  <text x="52" y="48" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700">AGENTIC SYSTEM — ENGINEERING FLOW</text>
+  <text x="52" y="73" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="13" letter-spacing="1.2">EVERY DECISION IS BOUNDED, OBSERVABLE, AND EVALUATED</text>
+
+  <path id="mainPath" d="M128 159H1072" stroke="url(#flow)" stroke-width="3" stroke-opacity="0.48" stroke-dasharray="8 10">
+    <animate attributeName="stroke-dashoffset" values="0;-72" dur="4s" repeatCount="indefinite"/>
+  </path>
+  <path d="M128 159H1072" stroke="#64748B" stroke-opacity="0.25" marker-end="url(#arrow)"/>
+
+  <g font-family="Inter, system-ui, sans-serif">
+    <g transform="translate(48 112)">
+      <rect width="160" height="94" rx="15" fill="#0B1320" stroke="#22D3EE" stroke-opacity="0.65"/>
+      <circle cx="26" cy="27" r="10" fill="#22D3EE" fill-opacity="0.17" stroke="#22D3EE"/>
+      <path d="M21 27H31M26 22V32" stroke="#22D3EE" stroke-width="1.5"/>
+      <text x="46" y="32" fill="#E2E8F0" font-size="15" font-weight="700">GOAL</text>
+      <text x="20" y="60" fill="#94A3B8" font-size="12">Intent, authority,</text><text x="20" y="78" fill="#94A3B8" font-size="12">success boundaries</text>
+    </g>
+    <g transform="translate(236 112)">
+      <rect width="160" height="94" rx="15" fill="#0B1320" stroke="#60A5FA" stroke-opacity="0.65"/>
+      <circle cx="26" cy="27" r="10" fill="#60A5FA" fill-opacity="0.17" stroke="#60A5FA"/>
+      <path d="M20 29L24 25L28 28L33 22" stroke="#60A5FA" stroke-width="1.5" fill="none"/>
+      <text x="46" y="32" fill="#E2E8F0" font-size="15" font-weight="700">PLANNER</text>
+      <text x="20" y="60" fill="#94A3B8" font-size="12">Decomposition and</text><text x="20" y="78" fill="#94A3B8" font-size="12">next-best action</text>
+    </g>
+    <g transform="translate(424 112)">
+      <rect width="160" height="94" rx="15" fill="#0B1320" stroke="#818CF8" stroke-opacity="0.65"/>
+      <circle cx="26" cy="27" r="10" fill="#818CF8" fill-opacity="0.17" stroke="#818CF8"/>
+      <path d="M21 23H31V31H21Z M23 25H29" stroke="#818CF8" stroke-width="1.3"/>
+      <text x="46" y="32" fill="#E2E8F0" font-size="15" font-weight="700">CONTEXT</text>
+      <text x="20" y="60" fill="#94A3B8" font-size="12">Retrieval, memory,</text><text x="20" y="78" fill="#94A3B8" font-size="12">ranking, freshness</text>
+    </g>
+    <g transform="translate(612 112)">
+      <rect width="160" height="94" rx="15" fill="#0B1320" stroke="#A78BFA" stroke-opacity="0.65"/>
+      <circle cx="26" cy="27" r="10" fill="#A78BFA" fill-opacity="0.17" stroke="#A78BFA"/>
+      <path d="M20 27H32M26 21V33M22 23L30 31M30 23L22 31" stroke="#A78BFA" stroke-width="1.1"/>
+      <text x="46" y="32" fill="#E2E8F0" font-size="15" font-weight="700">TOOLS</text>
+      <text x="20" y="60" fill="#94A3B8" font-size="12">APIs, data, code,</text><text x="20" y="78" fill="#94A3B8" font-size="12">validated actions</text>
+    </g>
+    <g transform="translate(800 112)">
+      <rect width="160" height="94" rx="15" fill="#0B1320" stroke="#C084FC" stroke-opacity="0.65"/>
+      <circle cx="26" cy="27" r="10" fill="#C084FC" fill-opacity="0.17" stroke="#C084FC"/>
+      <path d="M20 27L24 31L32 22" stroke="#C084FC" stroke-width="1.6" fill="none"/>
+      <text x="46" y="32" fill="#E2E8F0" font-size="15" font-weight="700">EVALUATOR</text>
+      <text x="20" y="60" fill="#94A3B8" font-size="12">Quality, evidence,</text><text x="20" y="78" fill="#94A3B8" font-size="12">safety, recovery</text>
+    </g>
+    <g transform="translate(988 112)">
+      <rect width="160" height="94" rx="15" fill="#0B1320" stroke="#34D399" stroke-opacity="0.7"/>
+      <circle cx="26" cy="27" r="10" fill="#34D399" fill-opacity="0.17" stroke="#34D399"/>
+      <path d="M21 27L25 31L32 22" stroke="#34D399" stroke-width="1.6" fill="none"/>
+      <text x="46" y="32" fill="#E2E8F0" font-size="15" font-weight="700">OUTCOME</text>
+      <text x="20" y="60" fill="#94A3B8" font-size="12">Reliable response</text><text x="20" y="78" fill="#94A3B8" font-size="12">or safe escalation</text>
+    </g>
+  </g>
+
+  <circle r="5" fill="#F8FAFC" filter="url(#glow)"><animateMotion dur="5.5s" repeatCount="indefinite"><mpath href="#mainPath"/></animateMotion></circle>
+  <circle r="3" fill="#22D3EE"><animateMotion dur="5.5s" begin="-1.8s" repeatCount="indefinite"><mpath href="#mainPath"/></animateMotion></circle>
+  <circle r="3" fill="#A78BFA"><animateMotion dur="5.5s" begin="-3.6s" repeatCount="indefinite"><mpath href="#mainPath"/></animateMotion></circle>
+  <text x="600" y="256" text-anchor="middle" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">trace_id: plan → retrieve → act → evaluate → respond</text>
+  <rect x="0.75" y="0.75" width="1198.5" height="298.5" rx="19.25" stroke="url(#flow)" stroke-opacity="0.24" stroke-width="1.5"/>
+</svg>

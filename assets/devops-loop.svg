@@ -1,0 +1,29 @@
+<svg width="1200" height="270" viewBox="0 0 1200 270" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">DevOps continuous delivery loop</title>
+  <desc id="desc">An animated continuous engineering loop through planning, building, testing, security, deployment, observation and improvement.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="270"><stop stop-color="#07111F"/><stop offset="0.55" stop-color="#0D1728"/><stop offset="1" stop-color="#071A20"/></linearGradient>
+    <linearGradient id="line" x1="65" y1="0" x2="1135" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#22D3EE"/><stop offset="0.5" stop-color="#60A5FA"/><stop offset="1" stop-color="#34D399"/></linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" stroke="#93C5FD" stroke-opacity="0.04"/></pattern>
+  </defs>
+  <rect width="1200" height="270" rx="20" fill="url(#bg)"/><rect width="1200" height="270" rx="20" fill="url(#grid)"/>
+  <text x="52" y="47" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700">CONTINUOUS DELIVERY — OPERATING LOOP</text>
+  <text x="52" y="72" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="13" letter-spacing="1.2">AUTOMATION CREATES SPEED; FEEDBACK CREATES CONFIDENCE</text>
+  <path d="M83 151C83 100 135 93 207 93H500C555 93 576 118 600 151C624 184 645 209 700 209H993C1065 209 1117 202 1117 151C1117 100 1065 93 993 93H700C645 93 624 118 600 151C576 184 555 209 500 209H207C135 209 83 202 83 151Z" stroke="#334155" stroke-width="2" stroke-opacity="0.7"/>
+  <path id="loopPath" d="M83 151C83 100 135 93 207 93H500C555 93 576 118 600 151C624 184 645 209 700 209H993C1065 209 1117 202 1117 151C1117 100 1065 93 993 93H700C645 93 624 118 600 151C576 184 555 209 500 209H207C135 209 83 202 83 151Z" stroke="url(#line)" stroke-width="3" stroke-opacity="0.82" stroke-dasharray="10 11">
+    <animate attributeName="stroke-dashoffset" values="0;-84" dur="4.5s" repeatCount="indefinite"/>
+  </path>
+  <g font-family="Inter, system-ui, sans-serif" text-anchor="middle">
+    <g transform="translate(164 122)"><circle r="29" fill="#0B1320" stroke="#22D3EE"/><path d="M-9 1L-3 7L10-8" stroke="#22D3EE" stroke-width="2" fill="none"/><text y="49" fill="#CBD5E1" font-size="13" font-weight="700">PLAN</text></g>
+    <g transform="translate(362 122)"><circle r="29" fill="#0B1320" stroke="#38BDF8"/><path d="M-10-7H10V8H-10Z M-5-11V-7M5-11V-7" stroke="#38BDF8" stroke-width="1.7"/><text y="49" fill="#CBD5E1" font-size="13" font-weight="700">BUILD</text></g>
+    <g transform="translate(520 164)"><circle r="29" fill="#0B1320" stroke="#60A5FA"/><path d="M-9 0L-3 6L10-8" stroke="#60A5FA" stroke-width="2" fill="none"/><text y="49" fill="#CBD5E1" font-size="13" font-weight="700">TEST</text></g>
+    <g transform="translate(680 164)"><circle r="29" fill="#0B1320" stroke="#818CF8"/><path d="M0-11L10-7V1C10 8 5 12 0 15C-5 12-10 8-10 1V-7Z" stroke="#818CF8" stroke-width="1.7" fill="none"/><text y="49" fill="#CBD5E1" font-size="13" font-weight="700">SECURE</text></g>
+    <g transform="translate(838 122)"><circle r="29" fill="#0B1320" stroke="#A78BFA"/><path d="M0-12L10 3L3 2L0 13L-3 2L-10 3Z" stroke="#A78BFA" stroke-width="1.5" fill="none"/><text y="49" fill="#CBD5E1" font-size="13" font-weight="700">DEPLOY</text></g>
+    <g transform="translate(1036 122)"><circle r="29" fill="#0B1320" stroke="#34D399"/><path d="M-12 2C-6-7 6-7 12 2C6 11-6 11-12 2Z" stroke="#34D399" stroke-width="1.5" fill="none"/><circle cy="2" r="4" stroke="#34D399"/><text y="49" fill="#CBD5E1" font-size="13" font-weight="700">OBSERVE</text></g>
+  </g>
+  <circle r="5" fill="#F8FAFC" filter="url(#glow)"><animateMotion dur="8s" repeatCount="indefinite"><mpath href="#loopPath"/></animateMotion></circle>
+  <circle r="3" fill="#34D399"><animateMotion dur="8s" begin="-4s" repeatCount="indefinite"><mpath href="#loopPath"/></animateMotion></circle>
+  <text x="600" y="249" text-anchor="middle" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">measure → learn → improve → repeat</text>
+  <rect x="0.75" y="0.75" width="1198.5" height="268.5" rx="19.25" stroke="url(#line)" stroke-opacity="0.24" stroke-width="1.5"/>
+</svg>

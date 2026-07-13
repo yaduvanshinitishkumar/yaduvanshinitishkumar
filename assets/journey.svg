@@ -1,0 +1,52 @@
+<svg width="1200" height="380" viewBox="0 0 1200 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Nitish Kumar engineering journey</title>
+  <desc id="desc">A professional animated timeline from starting coding in Class 6 and freelancing in Class 11 to engineering leadership and Agentic AI.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="380"><stop stop-color="#07111F"/><stop offset="0.52" stop-color="#0D1728"/><stop offset="1" stop-color="#160E2A"/></linearGradient>
+    <linearGradient id="timeline" x1="86" y1="0" x2="1114" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#22D3EE"/><stop offset="0.5" stop-color="#60A5FA"/><stop offset="1" stop-color="#A78BFA"/></linearGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" stroke="#93C5FD" stroke-opacity="0.04"/></pattern>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="380" rx="20" fill="url(#bg)"/><rect width="1200" height="380" rx="20" fill="url(#grid)"/>
+  <text x="52" y="48" fill="#F8FAFC" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700">AN ENGINEERING JOURNEY BUILT EARLY</text>
+  <text x="52" y="73" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="13" letter-spacing="1.2">CURIOSITY → RESPONSIBILITY → LEADERSHIP → INTELLIGENT SYSTEMS</text>
+  <path id="timelinePath" d="M95 184H1105" stroke="url(#timeline)" stroke-width="4" stroke-opacity="0.65" stroke-dasharray="9 10"><animate attributeName="stroke-dashoffset" values="0;-76" dur="4s" repeatCount="indefinite"/></path>
+
+  <g font-family="Inter, system-ui, sans-serif">
+    <g transform="translate(55 110)">
+      <rect width="245" height="205" rx="17" fill="#0B1320" stroke="#22D3EE" stroke-opacity="0.58"/>
+      <circle cx="40" cy="74" r="26" fill="#22D3EE" fill-opacity="0.12" stroke="#22D3EE"/>
+      <rect x="27" y="62" width="26" height="20" rx="3" stroke="#22D3EE" stroke-width="1.6"/><path d="M34 68L30 72L34 76M46 68L50 72L46 76" stroke="#22D3EE" stroke-width="1.5"/>
+      <text x="78" y="66" fill="#22D3EE" font-size="13" font-weight="700" letter-spacing="1.2">CLASS 6</text>
+      <text x="78" y="88" fill="#F8FAFC" font-size="18" font-weight="700">Started coding</text>
+      <text x="26" y="125" fill="#94A3B8" font-size="13">Curiosity became a habit:</text><text x="26" y="147" fill="#94A3B8" font-size="13">learn, build, break, debug,</text><text x="26" y="169" fill="#94A3B8" font-size="13">understand, and try again.</text>
+    </g>
+    <g transform="translate(337 110)">
+      <rect width="245" height="205" rx="17" fill="#0B1320" stroke="#60A5FA" stroke-opacity="0.58"/>
+      <circle cx="40" cy="74" r="26" fill="#60A5FA" fill-opacity="0.12" stroke="#60A5FA"/>
+      <path d="M27 68H53V84H27Z M34 68V63H46V68M27 75H53" stroke="#60A5FA" stroke-width="1.5"/>
+      <text x="78" y="66" fill="#60A5FA" font-size="13" font-weight="700" letter-spacing="1.2">CLASS 11</text>
+      <text x="78" y="88" fill="#F8FAFC" font-size="18" font-weight="700">Began freelancing</text>
+      <text x="26" y="125" fill="#94A3B8" font-size="13">Real clients introduced scope,</text><text x="26" y="147" fill="#94A3B8" font-size="13">communication, deadlines,</text><text x="26" y="169" fill="#94A3B8" font-size="13">delivery, and ownership.</text>
+    </g>
+    <g transform="translate(619 110)">
+      <rect width="245" height="205" rx="17" fill="#0B1320" stroke="#818CF8" stroke-opacity="0.58"/>
+      <circle cx="40" cy="74" r="26" fill="#818CF8" fill-opacity="0.12" stroke="#818CF8"/>
+      <circle cx="40" cy="66" r="5" stroke="#818CF8"/><circle cx="30" cy="82" r="4" stroke="#818CF8"/><circle cx="50" cy="82" r="4" stroke="#818CF8"/><path d="M37 71L32 78M43 71L48 78M34 82H46" stroke="#818CF8"/>
+      <text x="78" y="66" fill="#818CF8" font-size="13" font-weight="700" letter-spacing="1.2">LEADERSHIP</text>
+      <text x="78" y="88" fill="#F8FAFC" font-size="18" font-weight="700">Systems and teams</text>
+      <text x="26" y="125" fill="#94A3B8" font-size="13">Scope expanded to product,</text><text x="26" y="147" fill="#94A3B8" font-size="13">architecture, platforms, DevOps,</text><text x="26" y="169" fill="#94A3B8" font-size="13">and cross-functional delivery.</text>
+    </g>
+    <g transform="translate(901 110)">
+      <rect width="245" height="205" rx="17" fill="#0B1320" stroke="#A78BFA" stroke-opacity="0.65"/>
+      <circle cx="40" cy="74" r="26" fill="#A78BFA" fill-opacity="0.12" stroke="#A78BFA"/>
+      <circle cx="40" cy="73" r="6" stroke="#A78BFA"/><circle cx="29" cy="64" r="4" stroke="#A78BFA"/><circle cx="52" cy="64" r="4" stroke="#A78BFA"/><circle cx="40" cy="88" r="4" stroke="#A78BFA"/><path d="M35 69L32 66M45 69L49 66M40 79V84" stroke="#A78BFA"/>
+      <text x="78" y="66" fill="#A78BFA" font-size="13" font-weight="700" letter-spacing="1.2">TODAY</text>
+      <text x="78" y="84" fill="#F8FAFC" font-size="16" font-weight="700">AI, DevOps &amp;</text><text x="78" y="104" fill="#F8FAFC" font-size="16" font-weight="700">education</text>
+      <text x="26" y="139" fill="#94A3B8" font-size="13">Building intelligent systems,</text><text x="26" y="161" fill="#94A3B8" font-size="13">reliable delivery platforms,</text><text x="26" y="183" fill="#94A3B8" font-size="13">products, teams, and clarity.</text>
+    </g>
+  </g>
+  <circle r="5" fill="#F8FAFC" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#timelinePath"/></animateMotion></circle>
+  <text x="600" y="348" text-anchor="middle" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">the tools changed; the habit of learning by building did not</text>
+  <rect x="0.75" y="0.75" width="1198.5" height="378.5" rx="19.25" stroke="url(#timeline)" stroke-opacity="0.24" stroke-width="1.5"/>
+</svg>
